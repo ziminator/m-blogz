@@ -38,7 +38,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem "sqlite3", "~> 1.4"
-  gem "rspec", "~> 3.10"
+  gem "rspec-rails", "~> 5.0"
   gem "factory_bot_rails", "~> 6.2"
   gem "capybara", "~> 3.36"
   gem "capybara-email", "~> 3.0"
@@ -52,7 +52,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem "spring", "~> 4.0"
 
   gem "i18n-debug", "~> 1.2"
   gem "html2slim", "~> 0.2.0"
