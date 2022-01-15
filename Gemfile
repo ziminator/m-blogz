@@ -5,8 +5,6 @@ ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -29,13 +27,21 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem "bootstrap", "~> 5.1"
-gem "kaminari-bootstrap", "~> 3.0"
+gem "kaminari", "~> 1.2"
+gem "rails-i18n", "~> 7.0"
+gem "devise-i18n", "~> 1.10"
+gem "simple_form", "~> 5.1"
 gem "slim-rails", "~> 3.3"
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem "sqlite3", "~> 1.4"
+  gem "rspec", "~> 3.10"
+  gem "factory_bot_rails", "~> 6.2"
+  gem "capybara", "~> 3.36"
+  gem "capybara-email", "~> 3.0"
 end
 
 group :development do
@@ -47,6 +53,13 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem "i18n-debug", "~> 1.2"
+  gem "html2slim", "~> 0.2.0"
+end
+
+group :production do
+  gem 'pg', '~> 1.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
