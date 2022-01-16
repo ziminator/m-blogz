@@ -39,6 +39,7 @@ group :development, :test do
 
   gem "sqlite3", "~> 1.4"
   gem "rspec-rails", "~> 5.0"
+  gem "shoulda-matchers", "~> 5.1"
   gem "factory_bot_rails", "~> 6.2"
   gem "capybara", "~> 3.36"
   gem "capybara-email", "~> 3.0"

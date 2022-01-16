@@ -1,0 +1,2 @@
+class Microblog < ApplicationRecord
+end
