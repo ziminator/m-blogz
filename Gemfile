@@ -26,7 +26,8 @@ gem 'redis', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-gem "bootstrap", "~> 5.1"
+# gem "bootstrap", "~> 5.1"
+gem "bootstrap-sass", "~> 3.4"
 gem "kaminari", "~> 1.2"
 gem "rails-i18n", "~> 7.0"
 gem "devise-i18n", "~> 1.10"
@@ -39,8 +40,8 @@ group :development, :test do
 
   gem "sqlite3", "~> 1.4"
   gem "rspec-rails", "~> 5.0"
-  gem "shoulda-matchers", "~> 5.1"
   gem "factory_bot_rails", "~> 6.2"
+  gem "shoulda-matchers", "~> 5.1"
   gem "capybara", "~> 3.36"
   gem "capybara-email", "~> 3.0"
 end
