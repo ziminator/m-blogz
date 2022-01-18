@@ -44,6 +44,7 @@ group :development, :test do
   gem "shoulda-matchers", "~> 5.1"
   gem "capybara", "~> 3.36"
   gem "capybara-email", "~> 3.0"
+  gem "rails-controller-testing", "~> 1.0"
 end
 
 group :development do
