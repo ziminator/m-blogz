@@ -1,0 +1,15 @@
+= provide(:title, 'All posts')
+.questions-index.row.d-flex.justify-content-center
+  .col-sm-8.justify-content-center
+    .card
+      .card-header.bg-light.d-flex.justify-content-center
+        h2 Лента
+        .card-body
+          .row.questions
+            = render @microposts
+
+
+
+/h1 Web::Microblogs#index
+/= simple_form_for @microblogs, url: index_path do |f|
+  = f.input :body, autofocus: true, autocomplete: "body", class: 'form-control'
