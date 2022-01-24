@@ -28,6 +28,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # gem "bootstrap", "~> 5.1"
 gem "bootstrap-sass", "~> 3.4"
+gem "bootstrap-icons", "~> 1.0"
 gem "kaminari", "~> 1.2"
 gem "rails-i18n", "~> 7.0"
 gem "devise-i18n", "~> 1.10"

@@ -1,0 +1,11 @@
+header.nav.navbar-fixed-top.navbar-inverse
+  .container
+    = link_to "M-BlogZ", root_path, id: "logo"
+    nav
+      ul.nav.navbar-nav.navbar-right.collapse.navbar-collapse
+        #bs-example-navbar-collapse-1
+          ul.nav.navbar-nav.navbar-right
+            li= link_to root_path
+              .glyphicon.glyphicon-home
+            li= link_to "Помощь", '#'
+            li= link_to "Войти", '#'
