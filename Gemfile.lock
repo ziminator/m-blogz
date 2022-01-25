@@ -288,6 +288,7 @@ DEPENDENCIES
   byebug
   capybara (~> 3.36)
   capybara-email (~> 3.0)
+  devise (~> 4.8)
   devise-i18n (~> 1.10)
   factory_bot_rails (~> 6.2)
   html2slim (~> 0.2.0)
