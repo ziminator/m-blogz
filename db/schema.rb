@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_25_193315) do
+ActiveRecord::Schema.define(version: 2022_01_26_150602) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body", null: false
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 2022_01_25_193315) do
     t.text "body", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "micropost_id"
+    t.integer "comment_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["comment_id"], name: "index_relationships_on_comment_id"
+    t.index ["micropost_id"], name: "index_relationships_on_micropost_id"
+    t.index ["user_id"], name: "index_relationships_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,4 +62,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_193315) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "relationships", "comments"
+  add_foreign_key "relationships", "microposts"
+  add_foreign_key "relationships", "users"
 end

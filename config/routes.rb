@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'web/static_pages#home'
 
   #scope module: :web do
   #  resources :microposts, shallow: true
   #end
+
+  devise_for :users
 
   scope module: :web do
     get 'index', to: 'microposts#index'
